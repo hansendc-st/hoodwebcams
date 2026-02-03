@@ -5,69 +5,68 @@
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+	* {
+	    box-sizing: border-box;
+	    margin: 0;
+	    padding: 0;
+	}
 
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f4f4f4;
+	body {
+	    font-family: Arial, sans-serif;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    min-height: 100vh;
+	    background-color: #f4f4f4;
 	    flex-direction: column;
-        }
+	}
 
 	.footer {
-            //background-color: blue;
+	    //background-color: blue;
 	    height: 70px;
 	}
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-            gap: 10px;
-            width: 100%;
-        }
+	.gallery {
+	    display: grid;
+	    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+	    gap: 10px;
+	    width: 100%;
+	}
 
-        .gallery-item {
-            display: flex;
-            flex-direction: column;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            background-color: #fff;
-        }
+	.gallery-item {
+	    display: flex;
+	    flex-direction: column;
+	    border-radius: 5px;
+	    overflow: hidden;
+	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	    background-color: #fff;
+	}
 
-        .spacer {
-            flex-grow: 1;
-        }
+	.spacer {
+	    flex-grow: 1;
+	}
 
-        .gallery a {
-            display: block;
+	.gallery a {
+	    display: block;
 	    position: relative;
-        }
+	}
 
-        .gallery img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            display: block;
-        }
+	.gallery img {
+	    width: 100%;
+	    height: auto;
+	    object-fit: contain;
+	    display: block;
+	}
 
-.white-big {
- color: white;
- font-size: 50px;
-}
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
+	.white-big {
+	    color: white;
+	    font-size: 50px;
+	}
+	.bottom-left {
+	    position: absolute;
+	    bottom: 8px;
+	    left: 16px;
+	}
 </style>
 <div id="images" class="gallery"></div>
 <script type="text/javascript">
@@ -81,17 +80,12 @@
 	[ "Bruno   ", "https://www.timberlinelodge.com/snowcameras/brunotop.jpg" ],
 	[ "Summit  ", "https://www.timberlinelodge.com/snowcameras/summit.jpg" ],
 	[ "Pucci   ", "https://www.timberlinelodge.com/snowcameras/pucci.jpg" ],
-//	[ "MdwStake2", "https://b9.hdrelay.com/camera/63cadf1f426d0a9136dc81da/snapshot" ],
 	[ "MdwStake3", "https://b15.hdrelay.com/camera/63cadf1f426d0a9136dc81da/snapshot" ],
 	[ "        ", "https://telemetry.skihood.com/cams/base" ],
 	[ "        ", "https://telemetry.skihood.com/cams/top" ],
 	[ "        ", "https://telemetry.skihood.com/cams/vista" ],
-	//[ "        ", "https://telemetry.skihood.com/cams/vstop" ],
 	[ "        ", "https://api.wetmet.net/widgets/image/frame.php?uid=b33acd75e0ba216558a38590f4d924ae&type=image&format=image.jpg" ],
 	[ "        ", "https://api.wetmet.net/widgets/image/frame.php?uid=c5a90b27806182f3b7b31fc9a79d6e7e&type=image&format=image.jpg" ],
-// old broken ones:
-//	[ "        ", "https://telemetry.skihood.com/cams/sahale" ],
-//	[ "MdwStake1", "https://img.hdrelay.com/snapshots/63cadf1f426d0a9136dc81da/1701450503160.jpg" ],
 	];
 
 	// Put a random url bit on all the webcams:
@@ -109,8 +103,6 @@
 		images.push(entry);
 	}
 
-
-	//var d = document.evaluate("//img", document, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
 	var d = document.getElementById("images");
 	d.classList.add("images");
 	var debug = true;
